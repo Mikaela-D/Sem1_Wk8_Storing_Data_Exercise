@@ -9,8 +9,10 @@ public class FirstPart {
             System.out.println("My file is located at " + myFile.getAbsolutePath());
             String content = "Details to write";
             try {
-                FileWriter myWriter = new FileWriter(myFile, true);
-                myWriter.write("Hello world");
+                PrintWriter myWriter = new PrintWriter("myFile1.txt");
+                myWriter.println("Chris");
+                myWriter.println("Kath");
+                myWriter.println("Jean");
                 myWriter.close();
             } catch (IOException e) {
                 e.printStackTrace();
